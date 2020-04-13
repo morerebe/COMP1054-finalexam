@@ -1,0 +1,197 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* 1. The common layout pattern used on the linked website is the z pattern */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Roboto', sans-serif;
+  font-size: 10px;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+.container {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img {
+  max-width: 100%;
+}
+
+/*nav*/
+
+nav {
+  padding-bottom: 6rem;
+  overflow: hidden;
+}
+
+nav ul {
+  padding: 0;
+  width: 100%;
+}
+
+nav li {
+  display: inline;
+}
+
+nav a {
+  float: right;
+  display: inline;
+  text-decoration: none;
+  color: #000;
+  margin: 2rem;
+}
+
+/* pricing grid */
+
+.pricingTable {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));  /* ANSWER NUMBER 4 IS RIGHT HERE! */
+  grid-gap: 1rem;
+  align-items: flex-start;
+  justify-content: center;
+  padding-bottom: 15rem;
+}
+
+.pricingTable section {
+  padding: 0 10px;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+}
+
+/*header image*/
+
+.bannerimage {
+  min-height: 300px;
+  background-image: url('./image/cat4.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*font styles*/
+
+h1 {
+  font-size: 3.5rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+h3 {
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+h4 {
+  font-size: 2.25rem;
+}
+
+p,
+li {
+  font-size: 1.6rem;
+}
+
+section ul {
+  list-style: none;
+}
+
+section > ul li {
+  text-align: center;
+}
+
+main h1,
+main p {
+  text-align: center;
+  line-height: 1.5;
+}
+
+main p {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/*button styles*/
+
+/* EXPLAIN THIS STYLE RULE (1 mark) */
+/* 2. This style rule is for the button inside of the pricingTable section (selector)
+      The properties are all used to style the size of the button, the font inside (including
+      the space between lines) and the roundess of the corners of the box. Each value
+      is in rems which is a unit of measure relative to the root sizing (in this instance the root
+      was set to 10px in the html selector)
+      */
+
+.pricingTable button {
+  padding: .5rem 1rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  border-radius: .3rem;
+  width: 100%;   /* I was getting frustrated the buttons would not center,
+  so illegitimate solution but it does look better than being left
+  justified in my opinion */
+}
+
+.pricingTable section:first-of-type button {
+  border: 1px solid #007bff;
+}
+
+
+/* FIX THIS STYLE RULE  (2 marks) */
+
+.pricingTable section:nth-of-type(2) button,
+.pricingTable section:nth-of-type(3) button {
+  background-color: #007bff;
+  color: #fff;
+  border: transparent;
+}
+
+/*footer*/
+
+footer {
+  padding: 0;
+  width: 100%;
+  display: flex;
+}
+
+footer p {
+  font-size: 1rem;
+}
+
+footer div {
+  width: 25%;
+}
+
+footer ul {
+  padding: 0px;
+  list-style: none;
+}
+
+/*media query*/
+
+@media screen and (max-width: 600px) {
+  body {
+    width: 100%;
+    font-size: 12px;
+  }
+
+  nav a {
+    float: left;
+  }
+}
